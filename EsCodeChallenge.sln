@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsCodeChallenge", "EsCodeChallenge.csproj", "{A8FBAD11-9623-4B96-9BB3-E24992C95310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsCodeChallengeTest", "..\EsCodeChallengeTest\EsCodeChallengeTest.csproj", "{107C6CC2-0A0C-4856-8B20-6643F5480336}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8FBAD11-9623-4B96-9BB3-E24992C95310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FBAD11-9623-4B96-9BB3-E24992C95310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FBAD11-9623-4B96-9BB3-E24992C95310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FBAD11-9623-4B96-9BB3-E24992C95310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{107C6CC2-0A0C-4856-8B20-6643F5480336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{107C6CC2-0A0C-4856-8B20-6643F5480336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{107C6CC2-0A0C-4856-8B20-6643F5480336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{107C6CC2-0A0C-4856-8B20-6643F5480336}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7F02A49-F38E-4E3C-A9D4-6E1754271FF3}
+	EndGlobalSection
+EndGlobal

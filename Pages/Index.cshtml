@@ -1,0 +1,52 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-md-left">
+    <h3 class="display-4">Software Filter by Version</h3>
+    <h5>
+        Please enter a minimum version number to filter the list of software products to only greater than the version entered.
+    </h5>
+    <p>
+        <i>Versions are in the format [major version].[minor version].[patch].  For Example - 2, 1.5, or 2.12.4.</i>
+    </p>
+    <div class="text-md-left"><hr />
+        <form asp-action="FilterPage">
+            <div class="text-md-left">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Version" class="col-md-2 control-label">Minimum&nbsp;Version</label>
+                    <div class="col-md-3">
+                        <input asp-for="Version" class="form-control" />
+                        <span asp-validation-for="Version" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Filter" class="btn-light" />
+                    </div>
+                </div>
+            </div>
+        </form><hr /><br />
+        <div class="text-md-left">
+            <h5>Results</h5>
+            <table cellpadding="10">
+                <thead>
+                    <tr>
+                        <td class="font-weight-bold">Product</td>
+                        <td class="font-weight-bold">Version</td>
+                    </tr>
+                </thead>
+                @foreach (var software in @Model.Results)
+                {
+                    <tr>
+                        <td>@software.Name</td>
+                        <td>@software.Version</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
