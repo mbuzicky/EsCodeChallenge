@@ -1,10 +1,3 @@
-# Hi #
-Thanks for applying to Emergent Software! We have a small code challenge for you to complete before your interview. We’ll review it and use it as a source of conversation about coding, so be prepared to talk about why you approached the problem the way you did and how you could have done it differently. 
-
-Our goal with giving you homework is to allow you to write code in a low stress environment on your own computer. We realize we’re asking you to do this in your personal time, but we prefer this format over a long session of whiteboarding code in an interview.
-
-You should not spend more than 4 hours on this challenge. If you reach the 4-hour mark and are not finished, just turn it in as-is and let us know what you would have done with more time.
-
 # The Challenge #
 An imaginary company stores a list of software products they use. They have stored the name and version of each product. They have asked us to create a simple website where users can type in a version number and receive a list of software products that are greater than the version they entered.
 
@@ -81,3 +74,13 @@ This site will be publicly available, so user authentication will not be require
             };
         }
     }
+
+# The Solution #
+The working solution is deployed to https://escodechallenge.azurewebsites.net/.  
+
+To perform the filtering and sorting of the results, I took advantage of the built in System.Version class (https://docs.microsoft.com/en-us/dotnet/api/system.version?view=net-5.0).  The beauty of this is that it implements IComparable & IEquatable and allows easy filtering and sorting of lists.  (And no messy business logic to maintain to perform string splits and parsing of integers, etc.).  The drawback of this approach is that it expects the version string to conform to having version segments that are Int32 and also does not like version that do not have at least one period so additional code was added to handle these scenarios.  For larger datasets, we would want to perform further analysis on performance impact.
+
+The Web App was written in .NETCore 3.1 ASPNet with Razor pages.
+
+# Unit Testing #
+A few basic unit tests were written in the EsCodeChallengeTest Repo.
